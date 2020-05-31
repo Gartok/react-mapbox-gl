@@ -1,12 +1,14 @@
 import * as MapboxGl from 'mapbox-gl';
 import * as React from 'react';
+
 import {
   Events,
-  listenEvents,
-  events,
   Listeners,
+  events,
+  listenEvents,
   updateEvents
 } from './map-events';
+
 import { MapContext } from './context';
 import { createPortal } from 'react-dom';
 const isEqual = require('deep-equal'); //tslint:disable-line
@@ -147,7 +149,7 @@ const ReactMapboxFactory = ({
 }: FactoryParameters) => {
   if (injectCSS) {
     // tslint:disable-next-line:no-submodule-imports
-    require('mapbox-gl/dist/mapbox-gl.css');
+    // require('mapbox-gl/dist/mapbox-gl.css');
   }
 
   return class ReactMapboxGl extends React.Component<Props & Events, State> {
